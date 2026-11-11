@@ -1,12 +1,14 @@
-// Cloudflare Pages Function: GET/POST /api/stats
-// Stores two counters in a KV namespace bound as COUNTER:
+// Cloudflare Worker: serves the static site from ./public and handles /api/stats.
+//
+// /api/stats keeps two counters in a KV namespace bound as COUNTER:
 //   views      - incremented once per browser on first visit
 //   interested - incremented when someone presses "I'm interested"
+// Without the KV binding the endpoint returns 503 and the page hides the counter.
 
 const headers = { 'content-type': 'application/json', 'cache-control': 'no-store' };
 const json = (data, status = 200) => new Response(JSON.stringify(data), { status, headers });
 
-export async function onRequest({ request, env }) {
+async function stats(request, env) {
   const kv = env.COUNTER;
   if (!kv) return json({ error: 'KV binding COUNTER is not set up' }, 503);
 
@@ -35,3 +37,11 @@ export async function onRequest({ request, env }) {
 
   return json({ error: 'method not allowed' }, 405);
 }
+
+export default {
+  async fetch(request, env) {
+    const { pathname } = new URL(request.url);
+    if (pathname === '/api/stats') return stats(request, env);
+    return env.ASSETS.fetch(request);
+  },
+};

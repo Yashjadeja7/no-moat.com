@@ -1,32 +1,31 @@
 # no-moat.com
 
-A single-page "domain for sale" site. No build step, no dependencies. Just `index.html`.
+A single-page "domain for sale" site, deployed as a Cloudflare Worker with static assets.
 
-## Deploy on Cloudflare Pages
+- `public/index.html` is the whole site.
+- `src/worker.js` serves it and handles `/api/stats` (view counter).
+- `wrangler.jsonc` is the Cloudflare config.
 
-1. Push this folder to a GitHub repo.
-2. Cloudflare dashboard → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**, then pick the repo.
-3. Build settings:
-   - Framework preset: **None**
-   - Build command: *(leave empty)*
-   - Build output directory: `/` (or leave empty)
-4. Deploy.
-5. In the Pages project → **Custom domains** → **Set up a custom domain** → enter `no-moat.com`. Since the domain is already on Cloudflare, the DNS record is added for you.
+## Deploy
 
-Optionally add `www.no-moat.com` as a second custom domain too.
+Cloudflare dashboard → **Workers & Pages** → **Create** → **Import a repository** → pick this repo.
+
+- Build command: *(empty)*
+- Deploy command: `npx wrangler deploy`
+- The Worker name in the dashboard must match `name` in `wrangler.jsonc` (`no-moat`).
+
+Then in the Worker → **Settings** → **Domains & Routes** → add `no-moat.com` as a custom domain.
 
 ## View counter (optional)
 
-The page shows a view count and an "I'm interested" button. They are backed by `functions/api/stats.js`, which Cloudflare Pages deploys automatically. It needs one KV namespace:
+The page shows a view count and an "I'm interested" button. Until KV is connected the counter stays hidden and the rest of the page works normally.
 
-1. Cloudflare dashboard → **Storage & Databases** → **KV** → **Create a namespace** (name it e.g. `no-moat-counter`).
-2. Pages project → **Settings** → **Bindings** (or **Functions** → **KV namespace bindings**) → **Add** → KV namespace.
-   - Variable name: `COUNTER`
-   - Namespace: the one you just created
-3. Redeploy (push a commit, or **Retry deployment**).
+1. Cloudflare dashboard → **Storage & Databases** → **KV** → **Create a namespace** (e.g. `no-moat-counter`) and copy its ID.
+2. In `wrangler.jsonc`, uncomment the `kv_namespaces` line and paste the ID (the line starts with a comma, keep it).
+3. Commit and push. Cloudflare redeploys.
 
-Until the binding exists, the counter stays hidden and the rest of the page works normally. Each browser is counted once (tracked in localStorage), so it's a rough count, not exact analytics.
+Each browser is counted once (tracked in localStorage), so it's a rough count, not exact analytics.
 
 ## Editing
 
-Change the price or email directly in `index.html` and push. Cloudflare redeploys automatically.
+Change the price or email in `public/index.html` and push. Cloudflare redeploys automatically.
