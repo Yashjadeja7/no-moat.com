@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>no-moat.com is for sale</title>
+  <meta name="description" content="no-moat.com: the only domain with no moat. For sale for $102,897.69 USD. Contact yashjadeja.yj94@gmail.com.">
+  <meta property="og:title" content="no-moat.com is for sale">
+  <meta property="og:description" content="The only domain with no moat. The only thing protecting it is the price tag.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%B0%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #f6f2e9;
+      --card: #fffdf8;
+      --fg: #1b1a17;
+      --muted: #75716a;
+      --line: #e3ddcf;
+      --accent: #1b1a17;
+      --accent-fg: #f6f2e9;
+      --pop: #e8553d;
+      --dot: #e6dfce;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121110;
+        --card: #1b1a17;
+        --fg: #f3efe6;
+        --muted: #938e83;
+        --line: #2c2a26;
+        --accent: #f3efe6;
+        --accent-fg: #121110;
+        --pop: #ff7a63;
+        --dot: #1e1c19;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      min-height: 100vh;
+      background-color: var(--bg);
+      background-image: radial-gradient(var(--dot) 1.2px, transparent 1.2px);
+      background-size: 22px 22px;
+      color: var(--fg);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.55;
+      display: flex;
+      justify-content: center;
+      padding: 56px 16px 40px;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { width: 100%; max-width: 640px; text-align: center; }
+
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 14px;
+    }
+    .tag .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--pop); margin-right: 8px; vertical-align: 1px; }
+
+    h1 {
+      font-family: ui-serif, Georgia, "Times New Roman", serif;
+      font-size: clamp(2.6rem, 11vw, 4.6rem);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin: 24px 0 8px;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .scene { width: 100%; max-width: 360px; height: auto; margin: 8px auto 0; display: block; }
+    .scene .line { stroke: var(--fg); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+    .scene .fill { fill: var(--card); }
+    .scene text { fill: var(--fg); font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+    .flag { fill: var(--pop); transform-origin: 160px 22px; animation: wave 2.4s ease-in-out infinite; }
+    @keyframes wave { 0%,100% { transform: skewY(0deg); } 50% { transform: skewY(-10deg); } }
+
+    .sub { color: var(--muted); font-size: 1.1rem; margin: 20px 0 32px; }
+
+    .price {
+      display: inline-block;
+      position: relative;
+      font-size: clamp(2rem, 8vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      font-variant-numeric: tabular-nums;
+      margin: 0;
+      padding: 12px 28px 12px 36px;
+      background: var(--card);
+      border: 2px solid var(--fg);
+      border-radius: 14px;
+      transform: rotate(-1.5deg);
+      box-shadow: 4px 4px 0 var(--fg);
+    }
+    .price::before {
+      content: "";
+      position: absolute; left: 12px; top: 50%;
+      width: 10px; height: 10px; margin-top: -5px;
+      border-radius: 50%;
+      border: 2px solid var(--fg);
+      background: var(--bg);
+    }
+    .price small { font-size: .38em; color: var(--muted); font-weight: 600; letter-spacing: .08em; margin-left: 6px; }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--accent-fg);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 10px;
+      border: 0;
+      font-size: 1rem;
+      font-family: inherit;
+      cursor: pointer;
+      transition: transform .12s ease, opacity .15s ease;
+    }
+    .btn:hover, .btn:focus-visible { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+    .hero-actions { margin-top: 32px; }
+
+    /* email card, always visible, copyable */
+    .mailcard {
+      margin: 28px auto 0;
+      max-width: 460px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      text-align: left;
+    }
+    .mailcard .label { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+    .mailrow { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    .mailrow code {
+      flex: 1 1 200px;
+      min-width: 0;
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: .95rem;
+      background: var(--bg);
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      padding: 10px 12px;
+      overflow-wrap: anywhere;
+      user-select: all;
+    }
+    .copy {
+      font: inherit; font-size: .9rem; font-weight: 600;
+      color: var(--fg);
+      background: transparent;
+      border: 1px solid var(--fg);
+      border-radius: 8px;
+      padding: 9px 14px;
+      cursor: pointer;
+      transition: background .12s ease, color .12s ease;
+    }
+    .copy:hover, .copy:focus-visible { background: var(--fg); color: var(--bg); }
+    .mailcard .hint { font-size: .82rem; color: var(--muted); margin: 10px 0 0; }
+
+    section { text-align: left; margin-top: 72px; }
+    h2 {
+      font-size: .8rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+      margin: 0 0 16px;
+    }
+    section p { margin: 0 0 16px; font-size: 1.05rem; }
+    section p.punch { font-family: ui-serif, Georgia, serif; font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; }
+
+    /* view counter */
+    .stats { display: flex; justify-content: center; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 22px; font-size: .9rem; color: var(--muted); }
+    .stats[hidden] { display: none; }
+    .stats b { color: var(--fg); font-variant-numeric: tabular-nums; }
+    .stats .copy:disabled { opacity: .6; cursor: default; background: transparent; color: var(--fg); }
+
+    ul.list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
+    ul.list li { padding: 14px 0 14px 34px; border-bottom: 1px solid var(--line); position: relative; }
+    ul.list li::before { content: "\2713"; position: absolute; left: 6px; top: 14px; color: var(--pop); font-weight: 700; }
+    ul.list b { display: block; }
+    ul.list span { color: var(--muted); font-size: .95rem; }
+
+    .cta { text-align: center; }
+    .cta .mailcard { text-align: left; }
+    .cta .hero-actions { margin-top: 22px; }
+
+    footer { margin-top: 56px; color: var(--muted); font-size: .8rem; }
+    footer span { display: inline-block; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .flag { animation: none; }
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="tag"><span class="dot"></span>Domain for sale</span>
+    <h1>no-moat.com</h1>
+
+    <svg class="scene" viewBox="0 0 320 170" role="img" aria-label="A small castle with a completely dry moat.">
+      <!-- ground -->
+      <path class="line" d="M10 120 H310"/>
+      <!-- castle -->
+      <rect class="line fill" x="110" y="50" width="100" height="70"/>
+      <path class="line fill" d="M110 50 v-10 h14 v10 M138 50 v-10 h14 v10 M166 50 v-10 h14 v10 M194 50 v-10 h14 v10"/>
+      <path class="line fill" d="M150 120 v-22 a10 10 0 0 1 20 0 v22"/>
+      <path class="line" d="M160 40 V20"/>
+      <path class="flag" d="M160 20 l18 7 l-18 7 z"/>
+      <!-- window -->
+      <rect class="line" x="124" y="66" width="10" height="14" rx="5"/>
+      <rect class="line" x="186" y="66" width="10" height="14" rx="5"/>
+      <!-- dry moat -->
+      <path class="line" d="M50 120 v16 q0 10 10 10 h200 q10 0 10 -10 v-16"/>
+      <path class="line" d="M84 146 l7 -6 l7 6 M140 146 l7 -6 l7 6 M236 146 l7 -6 l7 6" opacity=".45"/>
+      <!-- sign -->
+      <path class="line" d="M288 106 V120"/>
+      <rect class="line fill" x="264" y="84" width="48" height="22" rx="3"/>
+      <text x="288" y="98" font-size="8" text-anchor="middle" font-weight="700">MOAT: 0</text>
+    </svg>
+
+    <p class="sub">The only domain with no moat.<br>The only thing protecting it is the price tag.</p>
+
+    <p class="price">$102,897.69<small>USD</small></p>
+
+    <div class="hero-actions">
+      <a class="btn" href="mailto:yashjadeja.yj94@gmail.com?subject=Interested%20in%20no-moat.com">Make an offer</a>
+    </div>
+
+    <div class="mailcard">
+      <p class="label">Or just email me</p>
+      <div class="mailrow">
+        <code>yashjadeja.yj94@gmail.com</code>
+        <button class="copy" type="button" data-email="yashjadeja.yj94@gmail.com">Copy</button>
+      </div>
+      <p class="hint">If the button doesn't open your mail app, copy the address and email from wherever you like.</p>
+    </div>
+
+    <div class="stats" id="stats" hidden>
+      <span><b id="views">0</b> views</span>
+      <button class="copy" id="interest" type="button"><span id="interestLabel">I'm interested</span> &middot; <b id="interested">0</b></button>
+    </div>
+
+    <section class="cta">
+      <p class="punch">Since there's no moat left anymore, why not own the only no-moat.com?</p>
+    </section>
+
+    <section>
+      <h2>Why it's a good buy</h2>
+      <ul class="list">
+        <li><b>Six letters, two words.</b><span>Easy to say, easy to spell, easy to remember. Works on a podcast, on a slide, in a hallway.</span></li>
+        <li><b>It has a point of view.</b><span>Not another buzzword soup name. It says something, and people will ask about it.</span></li>
+        <li><b>It's a .com.</b><span>The one people type by default, and the one investors take seriously.</span></li>
+        <li><b>Fits a lot of things.</b><span>A startup, an indie product, a dev tool, a newsletter, a fund, a consultancy, an AI company.</span></li>
+        <li><b>Easy handover.</b><span>Registered through Cloudflare, so the transfer is quick and painless.</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>The price</h2>
+      <p class="punch">It's really cheap.</p>
+      <p>For a short, memorable .com with an idea behind it, $102,897.69 is a bargain. And since there's no moat, nothing stands between you and owning it.</p>
+    </section>
+
+    <section class="cta">
+      <h2>Interested?</h2>
+      <p class="punch">Be the one who owns it.</p>
+      <div class="mailcard">
+        <p class="label">Email</p>
+        <div class="mailrow">
+          <code>yashjadeja.yj94@gmail.com</code>
+          <button class="copy" type="button" data-email="yashjadeja.yj94@gmail.com">Copy</button>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a class="btn" href="mailto:yashjadeja.yj94@gmail.com?subject=Interested%20in%20no-moat.com">Open in my mail app</a>
+      </div>
+    </section>
+
+    <footer><span>no-moat.com &middot; for sale &middot; $102,897.69 USD</span></footer>
+  </main>
+
+  <script>
+    document.querySelectorAll('.copy').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var text = btn.getAttribute('data-email');
+        var done = function () {
+          var old = btn.textContent;
+          btn.textContent = 'Copied!';
+          setTimeout(function () { btn.textContent = old; }, 1600);
+        };
+        var fallback = function () {
+          var code = btn.parentNode.querySelector('code');
+          var range = document.createRange();
+          range.selectNodeContents(code);
+          var sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(range);
+          try { document.execCommand('copy'); done(); } catch (e) { btn.textContent = 'Press Ctrl+C'; }
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, fallback);
+        } else {
+          fallback();
+        }
+      });
+    });
+
+    // View counter + "I'm interested" button. Needs the /api/stats function
+    // (see README). If it isn't available, the counter simply stays hidden.
+    (function () {
+      var stats = document.getElementById('stats');
+      var viewsEl = document.getElementById('views');
+      var intEl = document.getElementById('interested');
+      var btn = document.getElementById('interest');
+      var label = document.getElementById('interestLabel');
+
+      function store(key, val) {
+        try {
+          if (val === undefined) return localStorage.getItem(key);
+          localStorage.setItem(key, val);
+        } catch (e) {}
+        return null;
+      }
+      function call(method, body) {
+        var opts = { method: method };
+        if (body) {
+          opts.headers = { 'content-type': 'application/json' };
+          opts.body = JSON.stringify(body);
+        }
+        return fetch('/api/stats', opts).then(function (r) {
+          if (!r.ok) throw new Error('stats unavailable');
+          return r.json();
+        });
+      }
+      function render(d) {
+        viewsEl.textContent = Number(d.views).toLocaleString();
+        intEl.textContent = Number(d.interested).toLocaleString();
+        stats.hidden = false;
+      }
+      function markInterested() {
+        btn.disabled = true;
+        label.textContent = 'Thanks, noted';
+      }
+
+      var alreadyViewed = store('nm_viewed') === '1';
+      (alreadyViewed ? call('GET') : call('POST', { type: 'view' }))
+        .then(function (d) {
+          if (!alreadyViewed) store('nm_viewed', '1');
+          render(d);
+          if (store('nm_interested') === '1') markInterested();
+        })
+        .catch(function () {});
+
+      btn.addEventListener('click', function () {
+        if (btn.disabled) return;
+        markInterested();
+        call('POST', { type: 'interest' })
+          .then(function (d) { store('nm_interested', '1'); render(d); })
+          .catch(function () { btn.disabled = false; label.textContent = "I'm interested"; });
+      });
+    })();
+  </script>
+</body>
+</html>
